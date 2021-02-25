@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MQTT</title>
+
+    <!-- Added the Bootstrap CDN -->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- <link rel="stylesheet" href="index.css"> -->
+
+    <style>
+        h1,
+        #activity {
+            margin-left: 2%;
+        }
+
+        .row {
+            padding: 5px;
+        }
+
+        .container {
+            border: 1px solid black;
+            /* padding: 20px; */
+            width: 95%;
+            padding-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="row">
+        <h1>MQTT</h1>
+        <h4 id="activity">Activity 3: Publish/Subscribe Web Client</h4>
+        <div class="container">
+            <div class="col-sm-6">
+                <br>
+                <h4>Publish</h4>
+                <hr>
+                Topic:<br>
+                <input id="pub-topic-input" style="width: 50%;" type="text"><br>
+                Payload:<br>
+                <input id="pub-payload-input" style="width: 50%;" type="text"><br>
+                <button id="pub-button" class="btn btn-primary" style="margin-top: 5px;" value="">Publish</button>
+            </div>
+            <div class="col-sm-6">
+                <br>
+                <h4>Subscribe</h4>
+                <hr>
+                Topic:<br>
+                <input id="sub-input" style="width: 50%;" type="text"><br>
+                <button id="sub-button" class="btn btn-primary" style="margin-top: 5px;" value="">Subscribe</button>
+            </div>
+        </div><br>
+        <div class="container">
+            <div class="col-sm-12">
+                <br>
+                <h4>Messages</h4>
+                <hr>
+                <table class="table table-striped" id="messages">
+                    <thead>
+                        <tr>
+                            <th scope="col">Topic</th>
+                            <th scope="col">Payload</th>
+                        </tr>
+                    </thead>
+                    <tbody id="infos">
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="./browserMqtt.js"></script>
+<script src="./jabagat-index.js"></script>
+
+</html>
